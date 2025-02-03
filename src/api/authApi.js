@@ -1,21 +1,28 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://127.0.0.1:8000/auth"; // Your FastAPI backend
+const BASE_URL = "http://localhost:8000/auth"; // Update for deployment
 
-export const signup = async (email, password) => {
+export const registerUser = async (userData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/signup`, { email, password });
+    const response = await axios.post(`${BASE_URL}/register`, userData);
     return response.data;
   } catch (error) {
-    throw error.response ? error.response.data : new Error("Signup failed");
+    console.error("Error registering user:", error);
+    return null;
   }
 };
 
-export const login = async (email, password) => {
+export const loginUser = async (credentials) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/login`, { email, password });
+    const response = await axios.post(`${BASE_URL}/login`, credentials);
+    localStorage.setItem("token", response.data.access_token);
     return response.data;
   } catch (error) {
-    throw error.response ? error.response.data : new Error("Login failed");
+    console.error("Error logging in:", error);
+    return null;
   }
+};
+
+export const logoutUser = () => {
+  localStorage.removeItem("token");
 };
