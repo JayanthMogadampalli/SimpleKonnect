@@ -1,8 +1,15 @@
-# React + Vite
+# SimpleKonnect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 **SimpleKonnect** is a one-stop marketing platform for businesses to connect with customers.
 
-Currently, two official plugins are available:
+## Features
+✅ Browse businesses & products  
+✅ AI-powered analytics  
+✅ Easy business dashboard  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+```sh
+git clone https://github.com/JayanthMogadampalli/SimpleKonnect.git
+cd SimpleKonnect
+npm install
+npm run dev
