@@ -1,0 +1,1 @@
+const ProductDetails = () => (<div className="min-h-screen p-6"><h2 className="text-3xl font-bold text-gray-800">Product Details</h2><p className="text-gray-600">See product details, pricing, and availability.</p></div>); export default ProductDetails;

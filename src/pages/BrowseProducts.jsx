@@ -1,0 +1,1 @@
+const BrowseProducts = () => (<div className="min-h-screen p-6"><h2 className="text-3xl font-bold text-gray-800">Browse Products</h2><p className="text-gray-600">Discover a variety of products from verified businesses.</p></div>); export default BrowseProducts;
